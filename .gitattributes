@@ -3,29 +3,39 @@
 
 * text=auto
 
-# Unity files
-*.meta -text merge=unityyamlmerge diff
-*.unity -text merge=unityyamlmerge diff
-*.asset -text merge=unityyamlmerge diff
-*.prefab -text merge=unityyamlmerge diff
-*.mat -text merge=unityyamlmerge diff
-*.anim -text merge=unityyamlmerge diff
-*.controller -text merge=unityyamlmerge diff
-*.overrideController -text merge=unityyamlmerge diff
-*.physicMaterial -text merge=unityyamlmerge diff
-*.physicsMaterial2D -text merge=unityyamlmerge diff
-*.playable -text merge=unityyamlmerge diff
-*.mask -text merge=unityyamlmerge diff
-*.brush -text merge=unityyamlmerge diff
-*.flare -text merge=unityyamlmerge diff
-*.fontsettings -text merge=unityyamlmerge diff
-*.guiskin -text merge=unityyamlmerge diff
-*.giparams -text merge=unityyamlmerge diff
-*.renderTexture -text merge=unityyamlmerge diff
-*.spriteatlas -text merge=unityyamlmerge diff
-*.terrainlayer -text merge=unityyamlmerge diff
-*.mixer -text merge=unityyamlmerge diff
-*.shadervariants -text merge=unityyamlmerge diff
+# Line feed normalization
+* text=auto
+
+# Define common LFS attributes
+[attr]lfs filter=lfs diff=lfs merge=binary -text
+[attr]lock filter=lfs diff=lfs merge=binary -text lockable
+
+# Unreal Engine core binary asset types
+*.uasset lfs
+*.umap lfs
+
+# Source Art and Media formats
+*.png lfs
+*.jpg lfs
+*.jpeg lfs
+*.tga lfs
+*.psd lfs
+*.exr lfs
+*.hdr lfs
+*.fbx lfs
+*.obj lfs
+*.abc lfs
+*.wav lfs
+*.mp4 lfs
+*.mp3 lfs
+
+# Built/compiled binaries (if you track them)
+*.exe lfs
+*.dll lfs
+*.dylib lfs
+*.so lfs
+*.a lfs
+*.lib lfs
 
 # Image formats
 *.psd filter=lfs diff=lfs merge=lfs -text
